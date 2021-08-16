@@ -1,0 +1,8 @@
+{
+  "name": "idle-iframe",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+		"start": "npx concurrently \"npx srvs --port=8888 --docRoot=frame-wrapper\" \"BROWSER=none npx srvs --port=8889 --docRoot=frame-contents\""
+  }
+}

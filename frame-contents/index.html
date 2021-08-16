@@ -1,0 +1,14 @@
+<h1 id="idle-callback-count"></h1>
+<script>
+	const idleCallbackCountElement = document.getElementById(
+		'idle-callback-count'
+	);
+	let idleCallbackCount = 0;
+
+	setInterval(() => {
+		requestIdleCallback(() => {
+			idleCallbackCount++;
+			idleCallbackCountElement.innerHTML = `Idle Callbacks: ${idleCallbackCount}`;
+		});
+	}, 1000);
+</script>
